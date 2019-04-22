@@ -1,0 +1,15 @@
+<html>
+<head>
+	<title>Potins no Jutsu</title>
+</head>
+<body>
+	<h2>Page du potin n° <%= params["id"].to_i %></h2>
+	<% gossipx= Gossip.find(params["id"].to_i) %>
+	<% gossip_author = gossipx[0] %>
+	<% gossip_content = gossipx[1] %>
+	<p>auteur : <%= gossip_author %></br>
+	   contenu : <%= gossip_content %></p></br>
+	   <a href="/">retour a la page d'accueil</a>
+
+</body>
+</html>
